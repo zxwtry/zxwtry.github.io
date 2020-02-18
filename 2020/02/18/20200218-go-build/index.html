@@ -5,14 +5,16 @@
   
 
   
-  <title>20200210_daily | zxwtry daily blog</title>
+  <title>20200218_go_build | zxwtry daily blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="20200210_daily">
-<meta property="og:url" content="http://yoursite.com/2020/02/11/20200210-daily/index.html">
+  <meta name="description" content="##在环境中，一直困恼的问题 12345678910111213执行编译： go build -a -ldflags &#39;-extldflags &quot;-lm -lstdc++  -static&quot;&#39; -o bin&#x2F;a.out main.gogo1.12&#x2F;pkg&#x2F;tool&#x2F;linux_amd64&#x2F;link: runnin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20200218_go_build">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/20200218-go-build/index.html">
 <meta property="og:site_name" content="zxwtry daily blog">
-<meta property="article:published_time" content="2020-02-10T18:26:41.000Z">
-<meta property="article:modified_time" content="2020-02-10T18:26:41.030Z">
+<meta property="og:description" content="##在环境中，一直困恼的问题 12345678910111213执行编译： go build -a -ldflags &#39;-extldflags &quot;-lm -lstdc++  -static&quot;&#39; -o bin&#x2F;a.out main.gogo1.12&#x2F;pkg&#x2F;tool&#x2F;linux_amd64&#x2F;link: runnin">
+<meta property="article:published_time" content="2020-02-18T03:03:49.000Z">
+<meta property="article:modified_time" content="2020-02-18T03:07:33.024Z">
 <meta property="article:author" content="zxwtry">
 <meta name="twitter:card" content="summary">
   
@@ -67,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-20200210-daily" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20200218-go-build" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/02/11/20200210-daily/" class="article-date">
-  <time datetime="2020-02-10T18:26:41.000Z" itemprop="datePublished">2020-02-11</time>
+    <a href="/2020/02/18/20200218-go-build/" class="article-date">
+  <time datetime="2020-02-18T03:03:49.000Z" itemprop="datePublished">2020-02-18</time>
 </a>
     
   </div>
@@ -81,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      20200210_daily
+      20200218_go_build
     </h1>
   
 
@@ -89,11 +91,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>##在环境中，一直困恼的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行编译：</span><br><span class="line"> go build -a -ldflags &#39;-extldflags &quot;-lm -lstdc++  -static&quot;&#39; -o bin&#x2F;a.out main.go</span><br><span class="line"></span><br><span class="line">go1.12&#x2F;pkg&#x2F;tool&#x2F;linux_amd64&#x2F;link: running g++ failed: exit status 1</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br></pre></td></tr></table></figure>
+
+<p>###解决方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install libstdc++-static.x86_64</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/11/20200210-daily/" data-id="ck6gsj3z40000aczva2bzccy8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/18/20200218-go-build/" data-id="ck6rb6uny0002dwzvafp2227w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -102,19 +108,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/02/12/20200211-blank/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          20200211_blank
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/02/16/20200216-do-not-degenerate/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">20200216_do_not_degenerate</div>
     </a>
   
 </nav>
