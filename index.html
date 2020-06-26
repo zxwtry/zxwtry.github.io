@@ -109,26 +109,11 @@
 <li>在stata中执行对应do命令，会在同目录下生成.log文件<br><img src="2020-06-26-12-01-52.png" alt=""><br><img src="2020-06-26-12-06-16.png" alt=""></li>
 </ol>
 </blockquote>
-<h2 id="解析LOG"><a href="#解析LOG" class="headerlink" title="解析LOG"></a>解析LOG</h2><h3 id="指标格式"><a href="#指标格式" class="headerlink" title="指标格式"></a>指标格式</h3><blockquote>
-<blockquote>
-<p>所有指标都是以这种格式 cp1#4<br><img src="imgs/2020-06-26-12-14-26.png" alt=""><br>L1@1: -.8899202<br>L1#2: .5205347  </p>
-</blockquote>
-</blockquote>
-<h3 id="指标限制"><a href="#指标限制" class="headerlink" title="指标限制"></a>指标限制</h3><blockquote>
-<blockquote>
-<p> 类型1: &gt;<br> 类型2: &lt;<br> 类型3: ?  (接近)<br>=== 线分割不同限制，一个用例只需要满足一个限制即可  </p>
-</blockquote>
-</blockquote>
-<h3 id="指标权重"><a href="#指标权重" class="headerlink" title="指标权重"></a>指标权重</h3><blockquote>
-<blockquote>
-<p>不同指标有不同权重<br>cp1#4=40 代表  cp1 &amp;&amp; P&gt;|z| 的权重是40<br>默认权重是10  </p>
-</blockquote>
-</blockquote>
-<h3 id="展示指标"><a href="#展示指标" class="headerlink" title="展示指标"></a>展示指标</h3><blockquote>
-<blockquote>
-<p>最后在生成文件中，会展示的指标  </p>
-</blockquote>
-</blockquote>
+<h2 id="解析LOG"><a href="#解析LOG" class="headerlink" title="解析LOG"></a>解析LOG</h2><h3 id="指标格式"><a href="#指标格式" class="headerlink" title="指标格式"></a>指标格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">所有指标都是以这种格式 cp1#4   </span><br><span class="line">L1@1: -.8899202  </span><br><span class="line">L1#2: .5205347</span><br></pre></td></tr></table></figure>
+<p><a href="2020-06-26-12-14-26.png">示例图</a></p>
+<h3 id="指标限制"><a href="#指标限制" class="headerlink" title="指标限制"></a>指标限制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">类型1: &gt;   </span><br><span class="line">类型2: &lt;  </span><br><span class="line">类型3: ?  (接近)  </span><br><span class="line">&#x3D;&#x3D;&#x3D; 线分割不同限制，一个用例只需要满足一个限制即可</span><br></pre></td></tr></table></figure>
+<h3 id="指标权重"><a href="#指标权重" class="headerlink" title="指标权重"></a>指标权重</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">不同指标有不同权重  </span><br><span class="line">cp1#4&#x3D;40 代表  cp1 &amp;&amp; P&gt;|z| 的权重是40  </span><br><span class="line">默认权重是10</span><br></pre></td></tr></table></figure>
+<h3 id="展示指标"><a href="#展示指标" class="headerlink" title="展示指标"></a>展示指标</h3><p>最后在生成文件中，会展示的指标  </p>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1>
       
     </div>
