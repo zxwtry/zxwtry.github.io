@@ -7,12 +7,12 @@
   
   <title>stata辅助工具 | 相信时间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 功能 1.1. 值范围 1.2. stata执行 1.3. 解析LOG 1.3.1. 指标格式 1.3.2. 指标限制 1.3.3. 指标权重 1.3.4. 展示指标     2. 说明    1. 功能1.1. 值范围所有值在给定范x围全部罗列      罗列说明：      123xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 d">
+  <meta name="description" content="1. 功能 1.1. 值范围 1.2. stata执行 1.3. 解析LOG 1.3.1. 指标格式 1.3.2. 指标限制 1.3.3. 指标权重 1.3.4. 展示指标     2. 说明    1. 功能1.1. 值范围所有值在给定范x围全部罗列 罗列说明：   123xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 de1 ab2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="stata辅助工具">
 <meta property="og:url" content="http://yoursite.com/2020/06/26/stata-do-log-v1/index.html">
 <meta property="og:site_name" content="相信时间">
-<meta property="og:description" content="1. 功能 1.1. 值范围 1.2. stata执行 1.3. 解析LOG 1.3.1. 指标格式 1.3.2. 指标限制 1.3.3. 指标权重 1.3.4. 展示指标     2. 说明    1. 功能1.1. 值范围所有值在给定范x围全部罗列      罗列说明：      123xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 d">
+<meta property="og:description" content="1. 功能 1.1. 值范围 1.2. stata执行 1.3. 解析LOG 1.3.1. 指标格式 1.3.2. 指标限制 1.3.3. 指标权重 1.3.4. 展示指标     2. 说明    1. 功能1.1. 值范围所有值在给定范x围全部罗列 罗列说明：   123xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 de1 ab2">
 <meta property="og:image" content="http://yoursite.com/2020/06/26/stata-do-log-v1/2020-06-26-10-49-54.png">
 <meta property="og:image" content="http://yoursite.com/2020/06/26/stata-do-log-v1/2020-06-26-12-01-52.png">
 <meta property="og:image" content="http://yoursite.com/2020/06/26/stata-do-log-v1/2020-06-26-12-06-16.png">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/06/26/stata-do-log-v1/2020-06-26-12-14-26.png">
 <meta property="og:image" content="http://yoursite.com/2020/06/26/stata-do-log-v1/2020-06-26-19-08-26.png">
 <meta property="article:published_time" content="2020-06-26T02:43:42.000Z">
-<meta property="article:modified_time" content="2020-06-26T18:08:16.382Z">
+<meta property="article:modified_time" content="2020-06-26T18:22:37.541Z">
 <meta property="article:author" content="zxwtry">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/06/26/stata-do-log-v1/2020-06-26-10-49-54.png">
@@ -117,36 +117,19 @@
 </ul>
 <!-- /TOC -->
 
-<h1 id="1-功能"><a href="#1-功能" class="headerlink" title="1. 功能"></a>1. 功能</h1><h2 id="11-值范围"><a href="#11-值范围" class="headerlink" title="1.1. 值范围"></a>1.1. 值范围</h2><p>所有值在给定范x围全部罗列  </p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p><img src="2020-06-26-10-49-54.png" alt=""><br>罗列说明：  </p>
-</blockquote>
-</blockquote>
-</blockquote>
+<h1 id="1-功能"><a href="#1-功能" class="headerlink" title="1. 功能"></a>1. 功能</h1><h2 id="11-值范围"><a href="#11-值范围" class="headerlink" title="1.1. 值范围"></a>1.1. 值范围</h2><p>所有值在给定范x围全部罗列<br><img src="2020-06-26-10-49-54.png" alt=""></p>
+<p>罗列说明：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 de1 ab2  ,gmm(dtfp ,l(1 1) collapse ) gmm( re2,l(1 1) collapse ) gmm(ca1 ,l(1 1) collapse ) gmm(cp1 ,l(1 1) collapse ) gmm(de1  ,l(1 1) collapse ) robust two  </span><br><span class="line">这条命令中，l(1 1) 代表可以枚举的位置  </span><br><span class="line">当范围是 [1,3] 会有如下可能 l(1, 1)  l(1, 2)  l(1, 3)  l(2, 2)  l(2, 3)  l(3, 3)</span><br></pre></td></tr></table></figure>
 <p>举例：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 de1 ab2  ,gmm(dtfp ,l(1 1) collapse ) gmm( re2,l(1 1) collapse ) gmm(ca1 ,l(1 1) collapse ) gmm(cp1 ,l(1 1) collapse ) gmm(de1  ,l(1 1) collapse ) robust two </span><br><span class="line">值范围（包含边界） 1~3  </span><br><span class="line">生成的do文件是</span><br></pre></td></tr></table></figure>
 <p>示例do文件下载: <a href="do_file__00000.do">do文件（点击下载）</a>  </p>
 <h2 id="12-stata执行"><a href="#12-stata执行" class="headerlink" title="1.2. stata执行"></a>1.2. stata执行</h2><blockquote>
 <ol>
-<li>在stata中执行对应do命令，会在同目录下生成.log文件  <blockquote>
-<blockquote>
-<p><img src="2020-06-26-12-01-52.png" alt=""><br><img src="2020-06-26-12-06-16.png" alt=""><br>由于log文件太大，这里只放张截图<br><img src="2020-06-26-17-12-32.png" alt=""></p>
-</blockquote>
-</blockquote>
-</li>
+<li>在stata中执行对应do命令，会在同目录下生成.log文件<br>&emsp;<img src="2020-06-26-12-01-52.png" alt="">&emsp;<br>&emsp;<img src="2020-06-26-12-06-16.png" alt="">&emsp;<br>由于log文件太大，这里只放张截图<br>&emsp;<img src="2020-06-26-17-12-32.png" alt="">&emsp;</li>
 </ol>
 </blockquote>
 <h2 id="13-解析LOG"><a href="#13-解析LOG" class="headerlink" title="1.3. 解析LOG"></a>1.3. 解析LOG</h2><h3 id="131-指标格式"><a href="#131-指标格式" class="headerlink" title="1.3.1. 指标格式"></a>1.3.1. 指标格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">所有指标都是以这种格式 cp1#4   </span><br><span class="line">L1@1: -.8899202  </span><br><span class="line">L1#2: .5205347</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
 <p><img src="2020-06-26-12-14-26.png" alt=""></p>
-</blockquote>
-</blockquote>
-</blockquote>
 <h3 id="132-指标限制"><a href="#132-指标限制" class="headerlink" title="1.3.2. 指标限制"></a>1.3.2. 指标限制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">类型1: &gt;   </span><br><span class="line">类型2: &lt;  </span><br><span class="line">类型3: ?  (接近)  </span><br><span class="line">&#x3D;&#x3D;&#x3D; 线分割不同限制，一个用例只需要满足一个限制即可</span><br></pre></td></tr></table></figure>
 <h3 id="133-指标权重"><a href="#133-指标权重" class="headerlink" title="1.3.3. 指标权重"></a>1.3.3. 指标权重</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">不同指标有不同权重</span><br><span class="line">cp1#4&#x3D;40 代表  cp1 中 P&gt;|z| 的权重是40  </span><br><span class="line">默认权重是10</span><br></pre></td></tr></table></figure>
 <h3 id="134-展示指标"><a href="#134-展示指标" class="headerlink" title="1.3.4. 展示指标"></a>1.3.4. 展示指标</h3><p>最后在生成文件中，会展示的指标  </p>
