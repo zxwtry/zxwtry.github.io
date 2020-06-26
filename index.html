@@ -67,53 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-20200221" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/21/20200221/" class="article-date">
-  <time datetime="2020-02-21T14:00:45.000Z" itemprop="datePublished">2020-02-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/21/20200221/">20200221</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#英语</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">primitive  原语</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="go-的Reader接口"><a href="#go-的Reader接口" class="headerlink" title="go 的Reader接口"></a>go 的Reader接口</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">type Reader	interface &#123;</span><br><span class="line">    Read(p []byte)	(n int,err error)</span><br><span class="line">&#125;</span><br><span class="line">1，当Read方法返回错误时，不代表没有读取到任何数据。调用者应该处理返回的任何数据，之后才处理可能的错误。</span><br><span class="line">2，所有实现Read方法的类型，都实现了io.Reader接口</span><br><span class="line">3，</span><br></pre></td></tr></table></figure>
-
-<h4 id="ffmpeg合并音频"><a href="#ffmpeg合并音频" class="headerlink" title="ffmpeg合并音频"></a>ffmpeg合并音频</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i &quot;concat:连城诀28-00.mp3|连城诀28-01.mp3|连城诀28-02.mp3|连城诀28-03.mp3|连城诀28-04.mp3|连城诀28-05.mp3|连城诀28-06.mp3|连城诀28-07.mp3|连城诀28-08.mp3|连城诀28-09.mp3|连城诀28-10.mp3&quot; -acodec copy 连城诀28.mp3</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="春光灿烂猪八戒"><a href="#春光灿烂猪八戒" class="headerlink" title="春光灿烂猪八戒"></a>春光灿烂猪八戒</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">武大郎：咱不是那种有福气的人</span><br></pre></td></tr></table></figure>
-
-<h4 id="20200224"><a href="#20200224" class="headerlink" title="20200224"></a>20200224</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这个是不需要的</span><br><span class="line"></span><br><span class="line">现在时间：2020年2月24日02时18分01秒</span><br><span class="line">睡觉</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/21/20200221/" data-id="ck6y2gdh70000sczvafht2icp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-20200218-go-build" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/18/20200218-go-build/" class="article-date">
@@ -136,282 +89,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="在环境中，一直困恼的问题"><a href="#在环境中，一直困恼的问题" class="headerlink" title="在环境中，一直困恼的问题"></a>在环境中，一直困恼的问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行编译：</span><br><span class="line"> go build -a -ldflags &#39;-extldflags &quot;-lm -lstdc++  -static&quot;&#39; -o bin&#x2F;a.out main.go</span><br><span class="line"></span><br><span class="line">go1.12&#x2F;pkg&#x2F;tool&#x2F;linux_amd64&#x2F;link: running g++ failed: exit status 1</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br></pre></td></tr></table></figure>
+        <!-- TOC -->
 
-<h4 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install libstdc++-static.x86_64</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="#01-在环境中一直困恼的问题">0.1. 在环境中，一直困恼的问题</a></li>
+<li><a href="#02-解决方法">0.2. 解决方法：</a></li>
+</ul>
+<!-- /TOC -->
+
+
+<h2 id="0-1-在环境中，一直困恼的问题"><a href="#0-1-在环境中，一直困恼的问题" class="headerlink" title="0.1. 在环境中，一直困恼的问题"></a>0.1. 在环境中，一直困恼的问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">执行编译：</span><br><span class="line"> go build -a -ldflags &#39;-extldflags &quot;-lm -lstdc++  -static&quot;&#39; -o bin&#x2F;a.out main.go</span><br><span class="line"></span><br><span class="line">go1.12&#x2F;pkg&#x2F;tool&#x2F;linux_amd64&#x2F;link: running g++ failed: exit status 1</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ld: cannot find -lstdc++</span><br></pre></td></tr></table></figure>
+
+<h2 id="0-2-解决方法："><a href="#0-2-解决方法：" class="headerlink" title="0.2. 解决方法："></a>0.2. 解决方法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install libstdc++-static.x86_64</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p><img src="imgs/2020-06-26-10-18-53.png" alt=""></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
       
     </div>
     <footer class="article-footer">
       <a data-url="http://yoursite.com/2020/02/18/20200218-go-build/" data-id="ck6rb6uny0002dwzvafp2227w" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20200216-do-not-degenerate" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/16/20200216-do-not-degenerate/" class="article-date">
-  <time datetime="2020-02-16T10:26:41.000Z" itemprop="datePublished">2020-02-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/16/20200216-do-not-degenerate/">20200216_do_not_degenerate</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="面试题01"><a href="#面试题01" class="headerlink" title="面试题01"></a>面试题01</h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/16/20200216-do-not-degenerate/" data-id="ck6rb6unw0001dwzvhywo3u3s" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20200214-zhuyidan" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/14/20200214-zhuyidan/" class="article-date">
-  <time datetime="2020-02-14T05:44:14.000Z" itemprop="datePublished">2020-02-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/14/20200214-zhuyidan/">20200214_zhuyidan</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="朱一旦真TM是个人才"><a href="#朱一旦真TM是个人才" class="headerlink" title="朱一旦真TM是个人才"></a>朱一旦真TM是个人才</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="vscode能给我高潮"><a href="#vscode能给我高潮" class="headerlink" title="vscode能给我高潮"></a>vscode能给我高潮</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">太开心了，巨硬你真TM是个人才。</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/14/20200214-zhuyidan/" data-id="ck6rb6unp0000dwzv6g921qsf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20200213-yueyue-zuowen-like" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/13/20200213-yueyue-zuowen-like/" class="article-date">
-  <time datetime="2020-02-13T15:30:58.000Z" itemprop="datePublished">2020-02-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/13/20200213-yueyue-zuowen-like/">20200213_yueyue_zuowen_like</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://raw.githubusercontent.com/zxwtry/zxwtry.github.io/master/img/20200213_yueyue_zuowen_like_01.jpg" alt="avatar"></p>
-<p><img src="https://raw.githubusercontent.com/zxwtry/zxwtry.github.io/master/img/20200213_yueyue_zuowen_like_02.jpg" alt="avatar"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/13/20200213-yueyue-zuowen-like/" data-id="ck6kwi5q80000agzvgrk83gda" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20200213-blank" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/13/20200213-blank/" class="article-date">
-  <time datetime="2020-02-13T15:18:07.000Z" itemprop="datePublished">2020-02-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/13/20200213-blank/">20200213_blank</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="昨天太摸鱼了，真的太罪恶了"><a href="#昨天太摸鱼了，真的太罪恶了" class="headerlink" title="昨天太摸鱼了，真的太罪恶了"></a>昨天太摸鱼了，真的太罪恶了</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/13/20200213-blank/" data-id="ck6kwi5qi0001agzv83v38mnb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20200211-blank" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/12/20200211-blank/" class="article-date">
-  <time datetime="2020-02-11T17:24:30.000Z" itemprop="datePublished">2020-02-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/12/20200211-blank/">20200211_blank</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="今天又是摸鱼的一天，可耻"><a href="#今天又是摸鱼的一天，可耻" class="headerlink" title="今天又是摸鱼的一天，可耻"></a>今天又是摸鱼的一天，可耻</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/12/20200211-blank/" data-id="ck6i5oz040000w4zve50r0qn8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20200210-daily" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/11/20200210-daily/" class="article-date">
-  <time datetime="2020-02-10T18:26:41.000Z" itemprop="datePublished">2020-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/11/20200210-daily/">20200210_daily</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/11/20200210-daily/" data-id="ck6gsj3z40000aczva2bzccy8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/11/hello-world/" class="article-date">
-  <time datetime="2020-02-10T17:20:10.485Z" itemprop="datePublished">2020-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/11/hello-world/" data-id="ck6gqg1pe0000dgzvcary3tz7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -452,23 +154,7 @@
       <ul>
         
           <li>
-            <a href="/2020/02/21/20200221/">20200221</a>
-          </li>
-        
-          <li>
             <a href="/2020/02/18/20200218-go-build/">20200218_go_build</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/16/20200216-do-not-degenerate/">20200216_do_not_degenerate</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/14/20200214-zhuyidan/">20200214_zhuyidan</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/13/20200213-yueyue-zuowen-like/">20200213_yueyue_zuowen_like</a>
           </li>
         
       </ul>
