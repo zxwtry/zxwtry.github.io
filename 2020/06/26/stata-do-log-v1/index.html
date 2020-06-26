@@ -15,7 +15,7 @@
 <meta property="og:description" content="功能值范围  所有值在给定范围全部枚举          123xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 de1 ab2  ,gmm(dtfp ,l(1 1) collapse ) gmm( re2,l(1 1) collapse ) gmm(ca1 ,l(1 1) collapse ) gmm(cp1 ,l(1 1) collapse )">
 <meta property="og:image" content="http://yoursite.com/2020/06/26/stata-do-log-v1/2020-06-26-10-49-54.png">
 <meta property="article:published_time" content="2020-06-26T02:43:42.000Z">
-<meta property="article:modified_time" content="2020-06-26T03:45:02.517Z">
+<meta property="article:modified_time" content="2020-06-26T03:51:39.289Z">
 <meta property="article:author" content="zxwtry">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/06/26/stata-do-log-v1/2020-06-26-10-49-54.png">
@@ -104,7 +104,15 @@
 </ol>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 de1 ab2  ,gmm(dtfp ,l(1 1) collapse ) gmm( re2,l(1 1) collapse ) gmm(ca1 ,l(1 1) collapse ) gmm(cp1 ,l(1 1) collapse ) gmm(de1  ,l(1 1) collapse ) robust two  </span><br><span class="line">这条命令中，l(1 1) 代表可以枚举的位置  </span><br><span class="line">当范围是 [1,3] 会有如下可能 l(1, 1)  l(1, 2)  l(1, 3)  l(2, 2)  l(2, 3)  l(3, 3)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">举例  </span><br><span class="line">xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 de1 ab2  ,gmm(dtfp ,l(1 1) collapse ) gmm( re2,l(1 1) collapse ) robust two  </span><br><span class="line">值范围（包含边界） 1~3 </span><br><span class="line">生成的do文件是 [do文件](do_file__00000.do)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">举例  </span><br><span class="line">xtabond2 dtfp l1.dtfp er er1  fee age re2 ca1 cp1 de1 ab2  ,gmm(dtfp ,l(1 1) collapse ) gmm( re2,l(1 1) collapse ) gmm(ca1 ,l(1 1) collapse ) gmm(cp1 ,l(1 1) collapse ) gmm(de1  ,l(1 1) collapse ) robust two </span><br><span class="line">值范围（包含边界） 1~3  </span><br><span class="line">生成的do文件是</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="do_file__00000.do">do文件（点击下载）</a>  </p>
+</blockquote>
+<h2 id="解析LOG"><a href="#解析LOG" class="headerlink" title="解析LOG"></a>解析LOG</h2><blockquote>
+<ol>
+<li></li>
+</ol>
+</blockquote>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1>
       
     </div>
